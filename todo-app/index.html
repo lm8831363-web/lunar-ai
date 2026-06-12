@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar To-Do List 🌙</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">🌙 Lunar To-Do List</h1>
+                <p class="subtitle">Keep track of your tasks with Luna's help ✨</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="Add a new task... 🐰"
+                        autocomplete="off"
+                    >
+                    <button id="addBtn" class="add-button">Add Task</button>
+                </div>
+                <div class="quick-add-buttons">
+                    <button class="quick-btn" data-category="work">💼 Work</button>
+                    <button class="quick-btn" data-category="personal">👤 Personal</button>
+                    <button class="quick-btn" data-category="shopping">🛍️ Shopping</button>
+                    <button class="quick-btn" data-category="health">💪 Health</button>
+                </div>
+            </section>
+
+            <!-- Filter Section -->
+            <section class="filter-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <div class="stats">
+                    <span class="stat-item">Total: <span id="totalCount">0</span></span>
+                    <span class="stat-item">Completed: <span id="completedCount">0</span></span>
+                </div>
+            </section>
+
+            <!-- Tasks List Section -->
+            <section class="tasks-section">
+                <ul id="todoList" class="todo-list">
+                    <!-- Tasks will be inserted here -->
+                </ul>
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">🌟</div>
+                    <p class="empty-text">No tasks yet! Time to add something.</p>
+                    <p class="empty-subtext">Luna believes in you! 🐰</p>
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <section class="action-section">
+                <button id="clearCompletedBtn" class="action-button clear-btn">Clear Completed</button>
+                <button id="exportBtn" class="action-button export-btn">📥 Export Tasks</button>
+                <button id="clearAllBtn" class="action-button delete-btn">🗑️ Clear All</button>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with 🌙 by Luna | Your tasks are saved automatically ✨</p>
+        </footer>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
