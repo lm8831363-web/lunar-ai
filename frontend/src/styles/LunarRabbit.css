@@ -1,0 +1,188 @@
+/* Lunar Rabbit Mascot Styles */
+
+.lunar-rabbit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  gap: 15px;
+}
+
+.rabbit-container {
+  position: relative;
+  width: 180px;
+  height: 220px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.rabbit-head {
+  position: relative;
+  width: 120px;
+  height: 140px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #f0f0f0);
+  border-radius: 50% 50% 45% 45%;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(100, 181, 246, 0.4), inset -5px -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rabbit-ears {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ear-left,
+.ear-right {
+  position: absolute;
+  width: 35px;
+  height: 85px;
+  background: linear-gradient(90deg, #ffffff, #f0f0f0);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(100, 181, 246, 0.3), inset -3px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ear-left {
+  left: 15px;
+  transform: rotate(-20deg);
+}
+
+.ear-right {
+  right: 15px;
+  transform: rotate(20deg);
+}
+
+.rabbit-ears::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(100, 181, 246, 0.3) 35%, transparent 40%, transparent 60%, rgba(100, 181, 246, 0.3) 65%);
+  border-radius: 50%;
+  top: 0;
+}
+
+.rabbit-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.eyes {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.eye {
+  width: 20px;
+  height: 20px;
+  background: #333;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 10px rgba(100, 181, 246, 0.3);
+}
+
+.eye::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  animation: blink 3s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 90%, 100% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+}
+
+.nose {
+  width: 12px;
+  height: 12px;
+  background: #ffb6c1;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255, 182, 193, 0.5);
+}
+
+.mouth {
+  width: 30px;
+  height: 2px;
+  background: #333;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.mouth::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 15px;
+  background: transparent;
+  border: 2px solid #333;
+  border-top: none;
+  border-right: none;
+  margin-left: 11px;
+  margin-top: 0;
+  border-radius: 0 0 0 8px;
+}
+
+.rabbit-body {
+  width: 80px;
+  height: 100px;
+  background: radial-gradient(circle at 35% 35%, #ffffff, #f0f0f0);
+  border-radius: 50% 50% 45% 45%;
+  margin: -20px auto 0;
+  position: relative;
+  box-shadow: 0 0 20px rgba(100, 181, 246, 0.4), inset -5px -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rabbit-body::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(100, 181, 246, 0.2), transparent);
+  border-radius: 50% 50% 45% 45%;
+}
+
+.luna-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--lunar-glow);
+  text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .rabbit-container {
+    width: 150px;
+    height: 180px;
+  }
+
+  .rabbit-head {
+    width: 100px;
+    height: 110px;
+  }
+
+  .rabbit-body {
+    width: 65px;
+    height: 80px;
+  }
+}

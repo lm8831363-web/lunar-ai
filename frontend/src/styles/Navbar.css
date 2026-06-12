@@ -1,0 +1,115 @@
+/* Navbar Component Styles */
+
+.navbar {
+  background: linear-gradient(90deg, rgba(30, 58, 95, 0.9), rgba(45, 90, 140, 0.9));
+  border-bottom: 2px solid rgba(100, 181, 246, 0.3);
+  padding: 15px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.lunar-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--lunar-glow);
+  text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(100, 181, 246, 0.8);
+}
+
+.brand-icon {
+  font-size: 28px;
+  animation: bounce 2s infinite;
+}
+
+.brand-name {
+  background: linear-gradient(135deg, var(--lunar-glow), var(--lunar-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-greeting {
+  color: var(--lunar-silver);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.logout-button {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, var(--lunar-glow), var(--lunar-accent));
+  color: var(--lunar-dark);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(100, 181, 246, 0.3);
+}
+
+.logout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(100, 181, 246, 0.6);
+}
+
+.logout-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .user-greeting {
+    font-size: 12px;
+  }
+
+  .logout-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
